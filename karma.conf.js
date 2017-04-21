@@ -12,14 +12,13 @@ module.exports = function (config) {
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
       require('@angular/cli/plugins/karma'),
-      require('karma-es6-shim')
+      require('es6-shim')
     ],
     client:{
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     files: [
-      { pattern: './node_modules/es5-shim/es5-shim.js', watched: false },
-      { pattern: './src/test.ts', watched: false }
+       { pattern: './src/test.ts', watched: false }
     ],
     preprocessors: {
       './src/test.ts': ['@angular/cli']
